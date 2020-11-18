@@ -10,11 +10,7 @@ import Subject from "./details/Subject";
 import Wrapper from "./details/Wrapper";
 import debounce from "lodash/debounce";
 import ErrorMessage from "./ErrorMessage";
-// import handleViewport from "react-in-viewport";
-// import Block from "./details/BlockForBottomControl";
 import ContainerWithImages from "./ContainerWithImages";
-
-//const ViewportBlock = handleViewport(Block);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 const UnconnectedImages = props => {
@@ -47,7 +43,6 @@ const UnconnectedImages = props => {
   }, [fetchDetails, fetchImages]);
 
   return (
-    // <div className="images__background" id="images__background">
       <Wrapper class ='images__background'>
       <ErrorMessage />
       <Wrapper class="fotos__wrapper--form">
@@ -57,7 +52,7 @@ const UnconnectedImages = props => {
       <Subject />
       <ContainerWithImages />
       </Wrapper>
-    // </div>
+
   );
 };
 

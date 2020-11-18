@@ -36,42 +36,86 @@
       
     }
     
-    @media (max-width: 480px) {
-      #root {
+    // @media (max-width: 480px) {
+    //   #root {
+    //     background: url(../images/background_mobile.jpg) no-repeat center center fixed;
+    //     background-size: cover;
+    //   }
+    // }
+    
+    // @media (min-width: 481px) and (max-width: 759px) {
+    //   #root {
+    //     background: url(../images/background_small.jpg) no-repeat center center fixed;
+    //     background-size: cover;
+    //   }
+    // }
+    
+    // @media (min-width: 1601px) {
+    //   #root {
+    //     background: url(../images/background.jpg) no-repeat center center fixed;
+    //     background-size: cover;
+    //   }
+    // }
+    
+    // @media (min-width: 760px) and (max-width: 1024px) {
+    //   #root {
+    //     background: url(../images/background_tablet.jpg) no-repeat center center fixed;
+    //     background-size: cover;
+    //   }
+    // }
+    
+    // @media (min-width: 1025px) and (max-width: 1600px) {
+    //   #root {
+    //     background: url(../images/background_desktop.jpg) no-repeat center center fixed;
+    //     background-size: cover;
+    //   }
+    // }
+    
+ .root--fallback-background{
+@media (max-width: 480px) {
+    
         background: url(../images/background_mobile.jpg) no-repeat center center fixed;
         background-size: cover;
       }
-    }
+    
     
     @media (min-width: 481px) and (max-width: 759px) {
-      #root {
+     
         background: url(../images/background_small.jpg) no-repeat center center fixed;
         background-size: cover;
       }
-    }
+    
     
     @media (min-width: 1601px) {
-      #root {
+      
         background: url(../images/background.jpg) no-repeat center center fixed;
         background-size: cover;
       }
-    }
+    
     
     @media (min-width: 760px) and (max-width: 1024px) {
-      #root {
+    
         background: url(../images/background_tablet.jpg) no-repeat center center fixed;
         background-size: cover;
       }
-    }
+    
     
     @media (min-width: 1025px) and (max-width: 1600px) {
-      #root {
+    
         background: url(../images/background_desktop.jpg) no-repeat center center fixed;
         background-size: cover;
       }
-    }
     
-  
+    
+
+
+
+
+ } 
+
+
+
+
 
 .fade-in {
   animation: fadeIn ease-in-out 0.3s;

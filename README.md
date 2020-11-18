@@ -1,4 +1,4 @@
-# Google Books Finder with React, Redux, Router and Material UI
+# My Unsplash with React, Redux, Router and Material UI
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
@@ -34,8 +34,13 @@ The following tools and resources has been used while developing Google Books
 ### Version
 #### 1.0.0
 - initial
-
+#### 1.0.1
+- background dynamically fetched from Unsplash
+#### 1.0.2
+- modal with back and forth arrows
 ### License
 
 This software is distributed under MIT license
 
+### TODO
+- hover that shows author of image

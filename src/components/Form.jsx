@@ -13,9 +13,6 @@ import ImagesHint from "./details/ImagesHint";
 
 const UnconnectedForm = props => {
   const { fetchHints, hints, clearHints, fetchImages } = props;
-
-  //const { fetchHints, hints, clearHints, fetchImages, path } = props;
-  
   const history = useHistory();
   const [pattern, setPattern] = useState("");
 

@@ -29,35 +29,35 @@ body {
 }
 
 @media (max-width: 480px) {
-  #root {
+  .root--fallback-background {
     background: url(../images/background_mobile.jpg) no-repeat center center fixed;
     background-size: cover;
   }
 }
 
 @media (min-width: 481px) and (max-width: 759px) {
-  #root {
+  .root--fallback-background {
     background: url(../images/background_small.jpg) no-repeat center center fixed;
     background-size: cover;
   }
 }
 
 @media (min-width: 1601px) {
-  #root {
+  .root--fallback-background {
     background: url(../images/background.jpg) no-repeat center center fixed;
     background-size: cover;
   }
 }
 
 @media (min-width: 760px) and (max-width: 1024px) {
-  #root {
+  .root--fallback-background {
     background: url(../images/background_tablet.jpg) no-repeat center center fixed;
     background-size: cover;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-  #root {
+  .root--fallback-background {
     background: url(../images/background_desktop.jpg) no-repeat center center fixed;
     background-size: cover;
   }
@@ -490,13 +490,23 @@ code {
 .fotos__image {
   margin-bottom: 6px;
   padding-bottom: 24px;
-  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 @media (min-width: 768px) {
   .fotos__image {
     margin: 0 auto 6px auto;
   }
+}
+
+.fotos__image:hover {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.9)), color-stop(3.5%, rgba(0, 0, 0, 0.9)), color-stop(7%, rgba(0, 0, 0, 0.89)), color-stop(10.35%, rgba(0, 0, 0, 0.88)), color-stop(13.85%, rgba(0, 0, 0, 0.87)), color-stop(17.35%, rgba(0, 0, 0, 0.86)), color-stop(20.85%, rgba(0, 0, 0, 0.85)), color-stop(24.35%, rgba(0, 0, 0, 0.84)), color-stop(27.85%, rgba(0, 0, 0, 0.83)), color-stop(31.35%, rgba(0, 0, 0, 0.82)), color-stop(34.85%, rgba(0, 0, 0, 0.81)), color-stop(38.35%, rgba(0, 0, 0, 0.8)), color-stop(41.85%, rgba(0, 0, 0, 0.79)), color-stop(45.35%, rgba(0, 0, 0, 0.78)), color-stop(48.85%, rgba(0, 0, 0, 0.77)), color-stop(52.35%, rgba(0, 0, 0, 0.76)), color-stop(55.85%, rgba(0, 0, 0, 0.77)), color-stop(59.35%, rgba(0, 0, 0, 0.78)), color-stop(62.85%, rgba(0, 0, 0, 0.79)), color-stop(66.35%, rgba(0, 0, 0, 0.8)), color-stop(69.85%, rgba(0, 0, 0, 0.81)), color-stop(73.35%, rgba(0, 0, 0, 0.82)), color-stop(76.85%, rgba(0, 0, 0, 0.83)), color-stop(80.35%, rgba(0, 0, 0, 0.84)), color-stop(83.85%, rgba(0, 0, 0, 0.85)), color-stop(87.35%, rgba(0, 0, 0, 0.86)), color-stop(90.85%, rgba(0, 0, 0, 0.87)), color-stop(94.35%, rgba(0, 0, 0, 0.88)), color-stop(97.85%, rgba(0, 0, 0, 0.89)), to(rgba(0, 0, 0, 0.9)));
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.9) 3.5%, rgba(0, 0, 0, 0.89) 7%, rgba(0, 0, 0, 0.88) 10.35%, rgba(0, 0, 0, 0.87) 13.85%, rgba(0, 0, 0, 0.86) 17.35%, rgba(0, 0, 0, 0.85) 20.85%, rgba(0, 0, 0, 0.84) 24.35%, rgba(0, 0, 0, 0.83) 27.85%, rgba(0, 0, 0, 0.82) 31.35%, rgba(0, 0, 0, 0.81) 34.85%, rgba(0, 0, 0, 0.8) 38.35%, rgba(0, 0, 0, 0.79) 41.85%, rgba(0, 0, 0, 0.78) 45.35%, rgba(0, 0, 0, 0.77) 48.85%, rgba(0, 0, 0, 0.76) 52.35%, rgba(0, 0, 0, 0.77) 55.85%, rgba(0, 0, 0, 0.78) 59.35%, rgba(0, 0, 0, 0.79) 62.85%, rgba(0, 0, 0, 0.8) 66.35%, rgba(0, 0, 0, 0.81) 69.85%, rgba(0, 0, 0, 0.82) 73.35%, rgba(0, 0, 0, 0.83) 76.85%, rgba(0, 0, 0, 0.84) 80.35%, rgba(0, 0, 0, 0.85) 83.85%, rgba(0, 0, 0, 0.86) 87.35%, rgba(0, 0, 0, 0.87) 90.85%, rgba(0, 0, 0, 0.88) 94.35%, rgba(0, 0, 0, 0.89) 97.85%, rgba(0, 0, 0, 0.9));
+          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.9)), color-stop(3.5%, rgba(0, 0, 0, 0.9)), color-stop(7%, rgba(0, 0, 0, 0.89)), color-stop(10.35%, rgba(0, 0, 0, 0.88)), color-stop(13.85%, rgba(0, 0, 0, 0.87)), color-stop(17.35%, rgba(0, 0, 0, 0.86)), color-stop(20.85%, rgba(0, 0, 0, 0.85)), color-stop(24.35%, rgba(0, 0, 0, 0.84)), color-stop(27.85%, rgba(0, 0, 0, 0.83)), color-stop(31.35%, rgba(0, 0, 0, 0.82)), color-stop(34.85%, rgba(0, 0, 0, 0.81)), color-stop(38.35%, rgba(0, 0, 0, 0.8)), color-stop(41.85%, rgba(0, 0, 0, 0.79)), color-stop(45.35%, rgba(0, 0, 0, 0.78)), color-stop(48.85%, rgba(0, 0, 0, 0.77)), color-stop(52.35%, rgba(0, 0, 0, 0.76)), color-stop(55.85%, rgba(0, 0, 0, 0.77)), color-stop(59.35%, rgba(0, 0, 0, 0.78)), color-stop(62.85%, rgba(0, 0, 0, 0.79)), color-stop(66.35%, rgba(0, 0, 0, 0.8)), color-stop(69.85%, rgba(0, 0, 0, 0.81)), color-stop(73.35%, rgba(0, 0, 0, 0.82)), color-stop(76.85%, rgba(0, 0, 0, 0.83)), color-stop(80.35%, rgba(0, 0, 0, 0.84)), color-stop(83.85%, rgba(0, 0, 0, 0.85)), color-stop(87.35%, rgba(0, 0, 0, 0.86)), color-stop(90.85%, rgba(0, 0, 0, 0.87)), color-stop(94.35%, rgba(0, 0, 0, 0.88)), color-stop(97.85%, rgba(0, 0, 0, 0.89)), to(rgba(0, 0, 0, 0.9)));
+          mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.9) 3.5%, rgba(0, 0, 0, 0.89) 7%, rgba(0, 0, 0, 0.88) 10.35%, rgba(0, 0, 0, 0.87) 13.85%, rgba(0, 0, 0, 0.86) 17.35%, rgba(0, 0, 0, 0.85) 20.85%, rgba(0, 0, 0, 0.84) 24.35%, rgba(0, 0, 0, 0.83) 27.85%, rgba(0, 0, 0, 0.82) 31.35%, rgba(0, 0, 0, 0.81) 34.85%, rgba(0, 0, 0, 0.8) 38.35%, rgba(0, 0, 0, 0.79) 41.85%, rgba(0, 0, 0, 0.78) 45.35%, rgba(0, 0, 0, 0.77) 48.85%, rgba(0, 0, 0, 0.76) 52.35%, rgba(0, 0, 0, 0.77) 55.85%, rgba(0, 0, 0, 0.78) 59.35%, rgba(0, 0, 0, 0.79) 62.85%, rgba(0, 0, 0, 0.8) 66.35%, rgba(0, 0, 0, 0.81) 69.85%, rgba(0, 0, 0, 0.82) 73.35%, rgba(0, 0, 0, 0.83) 76.85%, rgba(0, 0, 0, 0.84) 80.35%, rgba(0, 0, 0, 0.85) 83.85%, rgba(0, 0, 0, 0.86) 87.35%, rgba(0, 0, 0, 0.87) 90.85%, rgba(0, 0, 0, 0.88) 94.35%, rgba(0, 0, 0, 0.89) 97.85%, rgba(0, 0, 0, 0.9));
 }
 
 .fotos__tag-wrapper {
@@ -601,6 +611,12 @@ code {
   fill: #d1d1d1;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  visibility: hidden;
+}
+
+.modalbody__arrow-svg.visible {
+  visibility: visible;
+  cursor: pointer;
 }
 
 .modalbody__header {
@@ -701,7 +717,7 @@ code {
 .modalbody__header-twitter {
   display: block;
   font-size: 11px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   line-height: 1.35;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -737,8 +753,8 @@ code {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   text-align: center;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -797,9 +813,9 @@ code {
 
 .modal-close__button {
   position: relative;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-  opacity: .8;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  opacity: 0.8;
   fill: #fff;
   -webkit-box-shadow: none;
           box-shadow: none;

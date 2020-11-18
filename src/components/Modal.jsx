@@ -1,6 +1,7 @@
 import * as React from "react";
 import Modal from "@material-ui/core/Modal";
 import { connect } from "react-redux";
+//import DetailsModalBody from'./DetailsModalBody';
 
 function SimpleModal(props) {
   const { isVisible, body, details } = props;
@@ -9,6 +10,7 @@ function SimpleModal(props) {
     <div>
       <Modal open={isVisible} aria-labelledby="simple-modal-title" aria-describedby="simple-modal-description" id="my-modal">
         {body(details)}
+       
       </Modal>
     </div>
   );

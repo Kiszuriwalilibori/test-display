@@ -1,4 +1,3 @@
-
 export const splitUrls = obj => {
   const thumb = obj.thumb ? obj.thumb + " " + "200w" + ", " : "";
   const small = obj.small ? obj.small + " " + "400w" + ", " : "";
@@ -12,30 +11,28 @@ export const extractData = ary => {
     result.id = item.id;
     result.urls = splitUrls(item.urls);
     result.tags = item.tags;
-    result.description =item.alt_description || item.description || '';
-    result.modal ={
-      name:item.user.name ||item.first_name+' '+item.last_name ||'',
-      twitter:item.user.twitter_username ||''
-    }
+    result.description = item.alt_description || item.description || "";
+    result.modal = {
+      name: item.user.name || item.first_name + " " + item.last_name || "",
+      twitter: item.user.twitter_username || "",
+    };
     return result;
   });
   return res;
 };
 
-export const createFormStyleLocationRelative=(str, baseClass)=>{
-  
-  switch(str) {
-    case '/':
+export const createFormStyleLocationRelative = (str, baseClass) => {
+  switch (str) {
+    case "/":
       return `${baseClass} form--search`;
-      
-    case '/images':
+
+    case "/images":
       return `${baseClass} form--images`;
-      
+
     default:
       return `${baseClass} form--search`;
-  } 
-}
-
+  }
+};
 
 export const getTags = ary => [
   ...new Set(
@@ -55,3 +52,13 @@ export const getOptions = ary =>
     return { value: item, label: capitalizeFirstLetter(item) };
   });
 
+export const setBackground = backgroundURL => {
+  var root = document.getElementById("root");
+
+  if (backgroundURL) {
+    root.style.background = `url(${backgroundURL}) no-repeat center center fixed`;
+    root.style.backgroundSize = `cover`;
+  } else {
+    root.classList.add("root--fallback-background");
+  }
+};

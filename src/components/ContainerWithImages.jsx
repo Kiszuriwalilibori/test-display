@@ -8,12 +8,9 @@ import handleViewport from "react-in-viewport";
 import { fetchImages} from "../redux/imagesReducer";
 import { fetchDetails } from "../redux/modalReducer";
 
-
 const ViewportBlock = handleViewport(Block);
-
 const UnconnectedImagesContainer =(props)=>{
 const {images, fetchDetails, fetchImages, subject} = props;
-
 
 const handleScrollBottom = useCallback(
   debounce(() => {
@@ -21,7 +18,6 @@ const handleScrollBottom = useCallback(
   }, 300),
   [fetchImages, subject]
 );
-
 
 useEffect(() => {
 
@@ -65,7 +61,3 @@ const mapDispatchToProps = dispatch => ({
 
 const ContainerWithImages = connect(mapStateToProps, mapDispatchToProps)(UnconnectedImagesContainer);
 export default ContainerWithImages;
-
-
-
-

@@ -2,8 +2,8 @@ import * as React from 'react';
 import {useDispatch} from 'react-redux';
 
 const DetailsModalBody = props => {
-  const dispatch = useDispatch();
-
+  console.log(props.previous, props.next);
+const dispatch = useDispatch();
   return (props?
 
     <div className="modalbody__container">
@@ -15,7 +15,7 @@ const DetailsModalBody = props => {
       </div>
       <aside className="modalbody__aside left">
         <div className="modalbody__arrow-box">
-          <svg viewBox="0 0 32 32" className="modalbody__arrow-svg">
+          <svg data-id={props.previous} viewBox="0 0 32 32" className={props.previous ? "modalbody__arrow-svg visible" :"modalbody__arrow-svg"}>
             <path d="M20.6667 24.6666l-2 2L8 16 18.6667 5.3333l2 2L12 16l8.6667 8.6666z"></path>
           </svg>
         </div>
@@ -83,7 +83,7 @@ const DetailsModalBody = props => {
       </article>
       <aside className="modalbody__aside right">
         <div className="modalbody__arrow-box">
-          <svg viewBox="0 0 32 32" className="modalbody__arrow-svg">
+          <svg  data-id={props.next} viewBox="0 0 32 32" className={props.next? "modalbody__arrow-svg visible" :"modalbody__arrow-svg"}>
             <path d="M11.3333 7.3333l2-2L24 16 13.3333 26.6666l-2-2L20 16l-8.6667-8.6667z"></path>
           </svg>
         </div>
@@ -91,6 +91,7 @@ const DetailsModalBody = props => {
     </div>:null
   );
 }
+
 
 export default DetailsModalBody;
 

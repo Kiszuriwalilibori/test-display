@@ -9,7 +9,7 @@ import Input from './details/Input';
 import {createFormStyleLocationRelative} from '../js/common';
 import NoHintsMessage from './details/NoHintsMessage';
 import ImagesHint from "./details/ImagesHint";
-
+import PropTypes from "prop-types";
 
 const UnconnectedForm = props => {
   const { fetchHints, hints, clearHints, fetchImages } = props;
@@ -61,16 +61,6 @@ const path = props.match.path;
           <ImagesHint key={index} hint={hint} />
         ))}
       </div>):null}
-
-
-
-
-
-
-
-
-
-
       <NoHintsMessage path ={path}/>
     </>
   );
@@ -90,11 +80,12 @@ const Form = withRouter(connect(mapStateToProps, mapDispatchToProps)(Unconnected
 
 export default Form;
 
-
-
-
-
-
+UnconnectedForm.propTypes ={
+  fetchHints: PropTypes.func,
+  fetchImages:PropTypes.func,
+  clearHints: PropTypes.func,
+  hints:PropTypes.array
+}
 
 
 

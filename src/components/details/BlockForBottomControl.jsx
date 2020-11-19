@@ -1,6 +1,8 @@
 import * as React from "react";
+import PropTypes from 'prop-types';
 const Block = props => {
     const { inViewport, forwardedRef } = props;
+    
     return (
       <div className="viewport-block" ref={forwardedRef}>
        

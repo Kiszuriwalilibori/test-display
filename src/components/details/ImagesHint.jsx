@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import PropTypes from 'prop-types';
 const ImagesHint = props => {
   const { hint } = props;
   return hint && hint.label && hint.value ? (
@@ -9,3 +9,5 @@ const ImagesHint = props => {
   ) : null;
 };
 export default ImagesHint;
+
+ImagesHint.propTypes = {hint: PropTypes.object};

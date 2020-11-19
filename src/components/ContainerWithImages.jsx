@@ -7,9 +7,12 @@ import Block from "./details/BlockForBottomControl";
 import handleViewport from "react-in-viewport";
 import { fetchImages} from "../redux/imagesReducer";
 import { fetchDetails } from "../redux/modalReducer";
+import PropTypes from 'prop-types';
 
 const ViewportBlock = handleViewport(Block);
+
 const UnconnectedImagesContainer =(props)=>{
+
 const {images, fetchDetails, fetchImages, subject} = props;
 
 const handleScrollBottom = useCallback(
@@ -61,3 +64,10 @@ const mapDispatchToProps = dispatch => ({
 
 const ContainerWithImages = connect(mapStateToProps, mapDispatchToProps)(UnconnectedImagesContainer);
 export default ContainerWithImages;
+
+UnconnectedImagesContainer.propTypes = {
+  fetchImages: PropTypes.func,
+  fetchDetails: PropTypes.func,
+  images: PropTypes.array,
+  subject: PropTypes.string,
+}

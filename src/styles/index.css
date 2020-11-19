@@ -479,6 +479,30 @@ code {
   }
 }
 
+.fotos__box:hover::after {
+  content: attr(data-description);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  padding: 48px 1rem 0 1rem;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+}
+
+.fotos__box:hover::before {
+  content: attr(data-user);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  padding: 72px 1rem 0 1rem;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+}
+
 .fotos__box.visible {
   visibility: visible;
 }

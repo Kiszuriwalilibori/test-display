@@ -1,7 +1,7 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
-import { fetchImages /*fetchHints*/ } from "../redux/imagesReducer";
+import { fetchImages} from "../redux/imagesReducer";
 import { fetchDetails } from "../redux/modalReducer";
 import DetailsModalBody from "./DetailsModalBody";
 import MyModal from "./Modal";
@@ -11,10 +11,10 @@ import Wrapper from "./details/Wrapper";
 import debounce from "lodash/debounce";
 import ErrorMessage from "./ErrorMessage";
 import ContainerWithImages from "./ContainerWithImages";
-
+import PropTypes from "prop-types";
 //////////////////////////////////////////////////////////////////////////////////////////////////
 const UnconnectedImages = props => {
-  const { subject, fetchImages, fetchDetails } = props;
+  const { fetchImages, fetchDetails } = props;
 
   useEffect(() => {
     window.addEventListener(
@@ -43,7 +43,7 @@ const UnconnectedImages = props => {
   }, [fetchDetails, fetchImages]);
 
   return (
-      <Wrapper class ='images__background'>
+    <Wrapper class="images__background">
       <ErrorMessage />
       <Wrapper class="fotos__wrapper--form">
         <Form />
@@ -51,19 +51,16 @@ const UnconnectedImages = props => {
       <MyModal body={DetailsModalBody} />
       <Subject />
       <ContainerWithImages />
-      </Wrapper>
-
+    </Wrapper>
   );
 };
-
-const mapStateToProps = state => ({
-  subject: state.images.subject,
-});
 
 const mapDispatchToProps = dispatch => ({
   fetchImages: str => dispatch(fetchImages(str)),
   fetchDetails: str => dispatch(fetchDetails(str)),
 });
 
-const Images = withRouter(connect(mapStateToProps, mapDispatchToProps)(UnconnectedImages));
+const Images = withRouter(connect(null, mapDispatchToProps)(UnconnectedImages));
 export default Images;
+
+ UnconnectedImages.propTypes = { fetchImages: PropTypes.func, fetchDetails: PropTypes.func };

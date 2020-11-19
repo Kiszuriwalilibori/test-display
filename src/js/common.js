@@ -1,3 +1,5 @@
+
+
 export const splitUrls = obj => {
   const thumb = obj.thumb ? obj.thumb + " " + "200w" + ", " : "";
   const small = obj.small ? obj.small + " " + "400w" + ", " : "";
@@ -12,6 +14,7 @@ export const extractData = ary => {
     result.urls = splitUrls(item.urls);
     result.tags = item.tags;
     result.description = item.alt_description || item.description || "";
+    result.user =item.user?.name ||item.user.first_name + " " + item.user.last_name;
     result.modal = {
       name: item.user.name || item.first_name + " " + item.last_name || "",
       twitter: item.user.twitter_username || "",

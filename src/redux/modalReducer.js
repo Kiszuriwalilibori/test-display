@@ -2,7 +2,7 @@ import { createAction, createReducer } from "@reduxjs/toolkit";
 import Unsplash, { toJson } from "unsplash-js";
 import { splitUrls } from "../js/common";
 import {accessKey} from '../js/fixtures';
-import {showError, checkNeighbours} from'./imagesReducer';
+import {showError} from'./imagesReducer';
 
 export const showModal = createAction("MODAL_SHOW");
 export const hideModal = createAction("MODAL_HIDE");

@@ -7,9 +7,10 @@ import {fetchBackgroundImage} from '../redux/imagesReducer';
 import Trending from './details/Trending';
 import Header from './details/Header';
 import ErrorMessage from './ErrorMessage';
+import PropTypes from "prop-types";
 
 const Section = (props) => {
-const {fetchBackgroundImage, backgroundImage} = props;
+const {fetchBackgroundImage} = props;
 
   useEffect(() => {
   
@@ -29,20 +30,11 @@ const {fetchBackgroundImage, backgroundImage} = props;
 };
 
 
-const mapStateToProps = state => ({
-  backgroundImage: state.images.backgroundImage,
-    
-});
 const mapDispatchToProps = dispatch => ({
   fetchBackgroundImage: () => dispatch(fetchBackgroundImage()),
 });
 
- const SearchSection = withRouter(connect(mapStateToProps, mapDispatchToProps)(Section));
+ const SearchSection = withRouter(connect(null, mapDispatchToProps)(Section));
  export default SearchSection;
 
-
-// unsplash.photos.getRandomPhoto({ username: "naoufal" })
-//   .then(toJson)
-//   .then(json => {
-    
-//   });
+ Section.propTypes ={fetchBackgroundImage: PropTypes.func}

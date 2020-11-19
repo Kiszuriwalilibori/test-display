@@ -50,8 +50,8 @@ const ErrorMessage = connect(
 
 export default ErrorMessage;
 
-// prepareLoadedCoinsMessage.propTypes ={
-//   open:PropTypes.bool,
-//   count:PropTypes.str,
-//   close:PropTypes.func
-// }
+Message.propTypes ={
+  isOpen:PropTypes.bool,
+  message:PropTypes.string,
+  close:PropTypes.func
+}

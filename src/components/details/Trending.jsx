@@ -1,6 +1,9 @@
 import * as React from "react";
+import PropTypes from 'prop-types';
+
 
 const Trending = React.memo(props => {
+  
   const { ary } = props;
   return (
     <ul className ="search-list">
@@ -15,3 +18,4 @@ const Trending = React.memo(props => {
 });
 
 export default Trending;
+Trending.propTypes = {ary:PropTypes.arrayOf(PropTypes.string)};

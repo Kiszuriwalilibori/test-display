@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {useDispatch} from 'react-redux';
+import PropTypes from 'prop-types';
 
 const DetailsModalBody = props => {
-  console.log(props.previous, props.next);
 const dispatch = useDispatch();
   return (props?
 
-    <div className="modalbody__container">
+    <div className="modalbody__container fade-in">
       <div className="modal-close__wrapper">
         <button className="modal-close__button" type ='button' onClick={() => dispatch({ type: 'MODAL_HIDE' })} >
         <svg width="32" height="32" className="modal-close__svg" version="1.1" viewBox="0 0 32 32" aria-hidden="false">
@@ -52,7 +52,7 @@ const dispatch = useDispatch();
           </div>
         </header>
 
-        <img alt={props.author} className="modalbody__image" sizes="(max-width: 767px) 100vw, (max-width: 532px) 500px, (max-height: 521px) 500px, (min-aspect-ratio: 3711/2562) calc((calc(100vh - 175px)) * 1.44848), calc(100vw - 32px)" srcSet={props.urls} />
+        <img alt={props.author} className="modalbody__image fade-in" sizes="(max-width: 767px) 100vw, (max-width: 532px) 500px, (max-height: 521px) 500px, (min-aspect-ratio: 3711/2562) calc((calc(100vh - 175px)) * 1.44848), calc(100vw - 32px)" srcSet={props.urls} />
 
         <footer className="modalbody__header footer">
           <div className="modalbody__header-author footer">
@@ -94,4 +94,15 @@ const dispatch = useDispatch();
 
 
 export default DetailsModalBody;
+
+DetailsModalBody.propTypes = PropTypes.shape({
+  previous: PropTypes.string,
+  next: PropTypes.string,
+  author: PropTypes.string,
+  location: PropTypes.string,
+  twitter: PropTypes.string,
+  profile_image: PropTypes.string,
+  urls: PropTypes.string,
+
+})
 

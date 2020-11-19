@@ -25,7 +25,6 @@ The following tools and resources has been used while developing Google Books
 * [Material UI](https://material-ui.com/) - React components for faster and easier web development
 * [React Router](https://courses.reacttraining.com/p/react-router-5) - Declarative routing for React
 
-
 ### Browser limitations
 
 - No suppport provided for Opera Mini
@@ -38,9 +37,12 @@ The following tools and resources has been used while developing Google Books
 - background dynamically fetched from Unsplash
 #### 1.0.2
 - modal with back and forth arrows
+#### 1.0.3
+- image shows some basic data when hovered
 ### License
 
 This software is distributed under MIT license
 
 ### TODO
 - hover that shows author of image
+- hinstmessage, trending, subject - proptypes problem

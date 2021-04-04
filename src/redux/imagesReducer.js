@@ -1,4 +1,5 @@
 import { createAction, createReducer} from "@reduxjs/toolkit";
+//const unsplash = createApi({ accessKey: 'MY_ACCESS_KEY' });
 import Unsplash, { toJson } from "unsplash-js";
 import { extractData, getOptions, getTags, setBackground} from "../js/common";
 import { accessKey } from "../js/fixtures";
@@ -180,10 +181,6 @@ export function fetchImages(pattern) {
   };
 }
 
-
-
-
-
 export function fetchBackgroundImage() {
   return dispatch => {
     const unsplash = new Unsplash(accessKey);
@@ -191,8 +188,7 @@ export function fetchBackgroundImage() {
       .getRandomPhoto({ query: "nature", orientation: "landscape" })
       .then(toJson)
       .then(json => {
-        //dispatch(getBackgroundImage(json));
-
+       
         let isMobile = window.matchMedia("(max-width: 768px)").matches;
         var root = document.getElementById("root");
         root.style.backgroundSize = `cover`;
